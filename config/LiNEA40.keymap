@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -81,13 +81,13 @@
             key-positions = <18 17>;
         };
 
-        PrevClick {
-            bindings = <&mkp MB4>;
+        Foward {
+            bindings = <&kp LC(RIGHT)>;
             key-positions = <27 28>;
         };
 
-        ClickNext {
-            bindings = <&mkp MB5>;
+        Back {
+            bindings = <&kp LC(LEFT)>;
             key-positions = <26 27>;
         };
 
@@ -111,13 +111,13 @@
             key-positions = <0 1>;
         };
 
-        MouseUP {
-            bindings = <&msc SCRL_UP>;
+        Scroll_UP {
+            bindings = <&kp UP>;
             key-positions = <16 7>;
         };
 
-        MouseDOWN {
-            bindings = <&msc SCRL_UP>;
+        Scroll_DOWN {
+            bindings = <&kp DOWN>;
             key-positions = <16 27>;
         };
     };
@@ -166,10 +166,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &msc SCRL_UP    &trans    &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB1  &msc SCRL_DOWN  &trans    &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB4  &trans          &mkp MB5  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans          &trans    &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans        &kp UP    &trans         &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB1      &kp DOWN  &trans         &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &kp LC(LEFT)  &trans    &kp LC(RIGHT)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                &trans    &trans         &trans
             >;
         };
 
