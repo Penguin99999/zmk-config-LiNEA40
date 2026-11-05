@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -172,10 +172,10 @@
 
         MARK {
             bindings = <
-&kp EXCLAMATION   &kp AT            &kp HASH  &kp DOLLAR     &kp PERCENT                      &kp CARET              &kp AMPERSAND          &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp LC(NUMBER_1)  &kp LC(NUMBER_2)  &none     &kp SEMICOLON  &kp SEMICOLON                    &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(M))))  &kp LS(LA(LC(LG(D))))  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&kp F11           &kp LC(UP_ARROW)  &none     &kp APOS       &kp SQT                          &kp LG(TAB)            &kp LS(LA(LC(LG(F))))  &kp LS(RIGHT_BRACKET)  &kp MINUS             &kp EQUAL
-&trans            &trans            &trans    &trans         &trans         &trans    &trans  &trans                                        &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp LS(QUESTION)
+&kp EXCLAMATION   &kp AT    &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp CARET              &kp AMPERSAND          &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp LC(NUMBER_1)  &kp LEFT  &kp UP    &kp RIGHT   &kp F11                        &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(M))))  &kp LS(LA(LC(LG(D))))  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&kp LC(NUMBER_2)  &none     &kp DOWN  &none       &kp LC(UP)                     &kp LG(TAB)            &kp LS(LA(LC(LG(F))))  &kp LS(RIGHT_BRACKET)  &kp MINUS             &kp EQUAL
+&trans            &trans    &trans    &trans      &trans       &trans    &trans  &trans                                        &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp LS(QUESTION)
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
