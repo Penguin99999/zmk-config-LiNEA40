@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -79,16 +79,6 @@
         RightClick {
             bindings = <&mkp MB2>;
             key-positions = <18 17>;
-        };
-
-        Foward {
-            bindings = <&kp LC(RIGHT)>;
-            key-positions = <27 28>;
-        };
-
-        Back {
-            bindings = <&kp LC(LEFT)>;
-            key-positions = <26 27>;
         };
 
         Eiji {
@@ -119,6 +109,11 @@
         Scroll_DOWN {
             bindings = <&kp DOWN>;
             key-positions = <16 27>;
+        };
+
+        program_sw {
+            bindings = <&kp RG(TAB)>;
+            key-positions = <16 17 18>;
         };
     };
 
