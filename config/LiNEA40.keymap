@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -66,24 +66,14 @@
     combos {
         compatible = "zmk,combos";
 
-        Kana {
-            bindings = <&kp LANGUAGE_1>;
+        LeftClick {
+            bindings = <&mkp LCLK>;
             key-positions = <16 17>;
-        };
-
-        DeleteKey {
-            bindings = <&kp DEL>;
-            key-positions = <7 8>;
         };
 
         RightClick {
             bindings = <&mkp MB2>;
             key-positions = <18 17>;
-        };
-
-        Eiji {
-            bindings = <&kp LANGUAGE_2>;
-            key-positions = <12 13>;
         };
 
         haifun {
@@ -101,18 +91,8 @@
             key-positions = <0 1>;
         };
 
-        Scroll_UP {
-            bindings = <&kp UP>;
-            key-positions = <16 7>;
-        };
-
-        Scroll_DOWN {
-            bindings = <&kp DOWN>;
-            key-positions = <16 27>;
-        };
-
         program_sw {
-            bindings = <&kp RG(TAB)>;
+            bindings = <&kp RG(SPACE)>;
             key-positions = <16 17 18>;
         };
     };
@@ -161,10 +141,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &kp UP    &trans    &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB1  &kp DOWN  &trans    &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB4  &trans    &mkp MB5  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans  &trans  &trans
             >;
         };
 
@@ -172,10 +152,10 @@
 
         MARK {
             bindings = <
-&kp EXCLAMATION   &kp AT    &kp HASH  &kp DOLLAR  &kp PERCENT                    &kp CARET              &kp AMPERSAND          &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp LC(NUMBER_1)  &kp LEFT  &kp UP    &kp RIGHT   &kp F11                        &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(M))))  &kp LS(LA(LC(LG(D))))  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&kp LC(NUMBER_2)  &none     &kp DOWN  &none       &kp LC(UP)                     &kp LG(TAB)            &kp LS(LA(LC(LG(F))))  &kp LS(RIGHT_BRACKET)  &kp MINUS             &kp EQUAL
-&trans            &trans    &trans    &trans      &trans       &trans    &trans  &trans                                        &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp LS(QUESTION)
+&kp EXCLAMATION   &kp AT  &kp HASH  &kp DOLLAR      &kp PERCENT                    &kp CARET              &kp AMPERSAND          &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp LC(NUMBER_1)  &none   &none     &kp LANGUAGE_2  &kp F11                        &kp LS(LA(LC(LG(A))))  &kp LANGUAGE_1         &kp LS(LA(LC(LG(D))))  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&kp LC(NUMBER_2)  &none   &none     &none           &kp LC(UP)                     &kp LG(TAB)            &kp LS(LA(LC(LG(F))))  &kp LS(RIGHT_BRACKET)  &kp MINUS             &kp EQUAL
+&trans            &trans  &trans    &trans          &trans       &trans    &trans  &trans                                        &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp LS(QUESTION)
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
